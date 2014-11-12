@@ -75,11 +75,11 @@ html
         p
         p
         ul
-          li <a href="http://semver.org/">http://semver.org/</a>
+          li <a href="https://github.com/bower/semver">https://github.com/bower/semver</a>
 
       section
         h2 bower.json Manifest File
-        pre
+        pre.compact
           code.language-javascript
             |$ bower init && cat bower.json
             |{
@@ -108,6 +108,14 @@ html
       section
         h2 Automating Bower
         h3 w/ Grunt, Gulp
+        pre.compact
+          code.language-markup
+            |&lt;html&gt;
+            |&lt;head&gt;
+            |  &lt;!-- bower:css --&gt;
+            |  &lt;!-- endbower --&gt;
+            |&lt;/head&gt;
+            |...
         p
         p Wiredep & other tools:
         ul
