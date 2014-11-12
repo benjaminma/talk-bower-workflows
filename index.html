@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>A Talk on Bower and Workflows</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article>
+      <section>
+        <h1>A Talk on Bower and Workflows</h1>
+        <h3>November 12, 2014 @ Node.DTLA</h3><img src="images/bower-logo.png" class="bower-logo">
+        <p></p>
+        <p></p>
+        <ul>
+          <li><a href="https://github.com/benjaminma/talk-bower-workflows">https://github.com/benjaminma/talk-bower-workflows</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Ben Ma</h2>
+        <ul>
+          <li>Software Developer</li>
+          <li><a href="mailto:ben@benjaminma.com">ben@benjaminma.com</a></li>
+        </ul>
+      </section>
+      <section class="align-left">
+        <h2>Bower?</h2>
+        <p></p>
+        <ol>
+          <li>A Node.js module</li>
+          <li>A command line tool</li>
+          <li>A package manager for the web</li>
+          <li>By Alex MacCaw, Jacob Thornton</li>
+        </ol>
+        <p></p>
+        <ul>
+          <li><a href="http://bower.io/">http://bower.io/</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>npm?</h2>
+        <p></p>
+        <h3>But we already have a package manager...</h3>
+        <p></p>
+        <ul>
+          <li><a href="http://www.quora.com/Why-use-Bower-when-there-is-npm">http://www.quora.com/Why-use-Bower-when-there-is-npm</a></li>
+        </ul>
+      </section>
+      <section class="align-left">
+        <h2>Agenda</h2>
+        <p></p>
+        <ol>
+          <li>Installing Bower</li>
+          <li>Installing Bower packages</li>
+          <li>Finding Bower packages</li>
+          <li>Developing your own package</li>
+          <li>Q&A</li>
+        </ol>
+      </section>
+      <section>
+        <h2>Installing Bower</h2>
+        <pre><code class="language-javascript">$ npm install --global bower
+$ bower --version && bower help</code></pre>
+      </section>
+      <section>
+        <h2>Installing Bower Packages</h2>
+        <pre><code class="language-javascript">$ bower install jquery
+$ bower install &lt;source&gt;#&lt;target&gt; [--save]
+# &lt;source&gt; = registry name, github, git URL
+# &lt;target&gt; = semver, branch, sha1
+$ bower list --paths</code></pre>
+        <p></p>
+        <p>Bower's semver Spec:</p>
+        <ul>
+          <li><a href="https://github.com/bower/semver">https://github.com/bower/semver</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>bower.json Manifest File</h2>
+        <pre class="compact"><code class="language-javascript">$ bower init && cat bower.json
+{
+ "name": "talk-bower-workflows",
+ "version": "0.1.0",
+ "dependencies": {
+   ...
+ }
+}</code></pre>
+        <p></p>
+        <p>bower.json Spec:</p>
+        <ul>
+          <li><a href="https://github.com/bower/bower.json-spec">https://github.com/bower/bower.json-spec</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>npm-scripts hook</h2>
+        <pre class="compact"><code class="language-javascript">$ cat package.json
+{
+ ...
+ "scripts": {
+   "postinstall": "bower install"
+   }
+ }
+}</code></pre>
+        <p></p>
+        <p>More info:</p>
+        <ul>
+          <li><a href="https://www.npmjs.org/doc/misc/npm-scripts.html">https://www.npmjs.org/doc/misc/npm-scripts.html</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Automating Bower</h2>
+        <h3>w/ Grunt, Gulp</h3>
+        <pre class="compact"><code class="language-markup">&lt;html&gt;
+&lt;head&gt;
+ &lt;!-- bower:css --&gt;
+ &lt;!-- endbower --&gt;
+&lt;/head&gt;
+...</code></pre>
+        <p></p>
+        <p>Wiredep & other tools:</p>
+        <ul>
+          <li><a href="http://bower.io/docs/tools/">http://bower.io/docs/tools/</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Finding Bower Packages</h2>
+        <pre><code class="language-javascript">$ bower search bootstrap
+$ bower home bootstrap</code></pre>
+        <p></p>
+        <p>Alternatively:</p>
+        <ul>
+          <li><a href="http://bower.io/search/">http://bower.io/search/</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Local Package Development</h2>
+        <pre><code class="language-javascript">$ bower link
+$ bower link &lt;myownpackage&gt;
+$ bower version &lt;whattobump&gt;
+$ git push --tags</code></pre>
+        <p></p>
+        <p>Inspired by:</p>
+        <ul>
+          <li><a href="https://oncletom.io/2013/live-development-bower-component/">https://oncletom.io/2013/live-development-bower-component/</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Summary</h2>
+        <pre><code class="language-javascript">$ bower init     # generating bower.json
+$ bower install  # installing packages
+$ bower list     # listing local packages
+$ bower search   # finding packages
+$ bower link     # local development</code></pre>
+        <p></p>
+        <p>Cheat sheets:</p>
+        <ul>
+          <li><a href="http://www.truelab.eu/cheatsheets/truelab_bower_cheatsheet_white.pdf">http://www.truelab.eu/.../truelab_bower_cheatsheet_white.pdf</a></li>
+          <li><a href="https://github.com/markusfalk/front-end-cheatsheet/blob/master/pdf/front-end-cheat-sheet.pdf?raw=true">https://github.com/markusfalk/.../front-end-cheat-sheet.pdf</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Thank You!</h2>
+      </section>
+      <section class="align-left">
+        <h2>Links</h2>
+        <ul>
+          <li><a href="https://github.com/benjaminma/talk-bower-workflows">GitHub: benjaminma/talk-bower-workflows</a></li>
+          <li><a href="http://bower.io/">Bower Homepage</a></li>
+          <li><a href="http://www.quora.com/Why-use-Bower-when-there-is-npm">Quora: Why use Bower when there is npm?</a></li>
+          <li><a href="https://github.com/bower/semver">GitHub: bower/semver</a></li>
+          <li><a href="https://www.npmjs.org/doc/misc/npm-scripts.html">Doc: npm-scripts</a></li>
+          <li><a href="http://bower.io/docs/tools/">Bower Tools (wiredep!)</a></li>
+          <li><a href="http://bower.io/search/">Bower Search</a></li>
+          <li><a href="https://oncletom.io/2013/live-development-bower-component/">Oncle Tom's Bower Link Tutorial</a></li>
+          <li><a href="http://www.truelab.eu/cheatsheets/truelab_bower_cheatsheet_white.pdf">PDF: Truelab's Bower Cheat Sheet</a></li>
+          <li><a href="https://github.com/markusfalk/front-end-cheatsheet/blob/master/pdf/front-end-cheat-sheet.pdf?raw=true">PDF: @markus_falk's Front End Cheat Sheet (semver!)</a></li>
+        </ul>
+      </section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
