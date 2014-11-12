@@ -4,7 +4,6 @@ var bespoke = require('bespoke'),
   keys = require('bespoke-keys'),
   touch = require('bespoke-touch'),
   scale = require('bespoke-scale'),
-  hash = require('bespoke-hash'),
   progress = require('bespoke-progress'),
   forms = require('bespoke-forms');
 
@@ -14,7 +13,6 @@ bespoke.from('article', [
   keys(),
   touch(),
   scale(),
-  hash(),
   progress(),
   forms()
 ]);
