@@ -1,6 +1,6 @@
 {
   "name": "talk-bower-workflows",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {},
   "devDependencies": {
     "bespoke": "^1.0.0",
@@ -30,5 +30,8 @@
   },
   "engines": {
     "node": ">=0.10.0"
+  },
+  "scripts": {
+    "postinstall": "bower install"
   }
 }

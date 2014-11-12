@@ -95,15 +95,21 @@ html
           li <a href="https://github.com/bower/bower.json-spec">https://github.com/bower/bower.json-spec</a>
 
       section
-        h2 Finding Bower Packages
-        pre
+        h2 npm-scripts hook
+        pre.compact
           code.language-javascript
-            |$ bower search bootstrap
-            |$ bower home bootstrap
+            |$ cat package.json
+            |{
+            |  ...
+            |  "scripts": {
+            |    "postinstall": "bower install"
+            |    }
+            |  }
+            |}
         p
-        p Alternatively:
+        p
         ul
-          li <a href="http://bower.io/search/">http://bower.io/search/</a>
+          li <a href="https://www.npmjs.org/doc/misc/npm-scripts.html">https://www.npmjs.org/doc/misc/npm-scripts.html</a>
 
       section
         h2 Automating Bower
@@ -120,6 +126,17 @@ html
         p Wiredep & other tools:
         ul
           li <a href="http://bower.io/docs/tools/">http://bower.io/docs/tools/</a>
+
+      section
+        h2 Finding Bower Packages
+        pre
+          code.language-javascript
+            |$ bower search bootstrap
+            |$ bower home bootstrap
+        p
+        p Alternatively:
+        ul
+          li <a href="http://bower.io/search/">http://bower.io/search/</a>
 
       section
         h2 Local Package Development
@@ -144,8 +161,9 @@ html
           li <a href="http://bower.io/">Bower Homepage</a>
           li <a href="http://www.quora.com/Why-use-Bower-when-there-is-npm">Quora: Why use Bower when there is npm?</a>
           li <a href="https://github.com/bower/semver">GitHub: bower/semver</a>
-          li <a href="http://bower.io/search/">Bower Search</a>
+          li <a href="https://www.npmjs.org/doc/misc/npm-scripts.html">Doc: npm-scripts</a>
           li <a href="http://bower.io/docs/tools/">Bower Tools (wiredep!)</a>
+          li <a href="http://bower.io/search/">Bower Search</a>
           li <a href="https://oncletom.io/2013/live-development-bower-component/">Oncle Tom's Bower Link Tutorial</a>
           li <a href="http://www.truelab.eu/cheatsheets/truelab_bower_cheatsheet_white.pdf">PDF: Truelab's Bower Cheat Sheet</a>
           li <a href="https://github.com/markusfalk/front-end-cheatsheet/blob/master/pdf/front-end-cheat-sheet.pdf?raw=true">PDF: @markus_falk's Front End Cheat Sheet (semver!)</a>
