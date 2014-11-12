@@ -1,0 +1,30 @@
+{
+  "name": "talk-bower-workflows",
+  "version": "0.1.0",
+  "dependencies": {
+    "prism": "gh-pages"
+  },
+  "authors": [
+    "Ben Ma <git.app@benjaminma.com>"
+  ],
+  "description": "A talk on Bower and workflows in bespoke.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "talk",
+    "presentation",
+    "bower",
+    "workflow",
+    "bespoke"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
