@@ -11,7 +11,7 @@ html
 
     article
 
-      section(data-bespoke-hash='start')
+      section
         h1 A Talk on Bower and Workflows
         h3 November 12, 2014 @ Node.DTLA
         img.bower-logo(src='images/bower-logo.png')
@@ -20,13 +20,13 @@ html
         ul
           li <a href="https://github.com/benjaminma/talk-bower-workflows">https://github.com/benjaminma/talk-bower-workflows</a>
 
-      section(data-bespoke-hash='about')
+      section
         h2 Ben Ma
         ul
           li Software Developer
           li <a href="mailto:ben@benjaminma.com">ben@benjaminma.com</a>
 
-      section.align-left(data-bespoke-hash='bower')
+      section.align-left
         h2 Bower?
         p
         ol
@@ -38,7 +38,7 @@ html
         ul
           li <a href="http://bower.io/">http://bower.io/</a>
 
-      section(data-bespoke-hash='npm')
+      section
         h2 npm?
         p
         h3 But we already have a package manager...
@@ -46,7 +46,7 @@ html
         ul
           li <a href="http://www.quora.com/Why-use-Bower-when-there-is-npm">http://www.quora.com/Why-use-Bower-when-there-is-npm</a>
 
-      section.align-left(data-bespoke-hash='agenda')
+      section.align-left
         h2 Agenda
         p
         ol
@@ -56,14 +56,14 @@ html
           li Developing your own package
           li Q&A
 
-      section(data-bespoke-hash='installing-bower')
+      section
         h2 Installing Bower
         pre
           code.language-javascript
             |$ npm install --global bower
             |$ bower --version && bower help
 
-      section(data-bespoke-hash='installing-bower-packages')
+      section
         h2 Installing Bower Packages
         pre
           code.language-javascript
@@ -75,10 +75,9 @@ html
         p
         p
         ul
-          li <a href="https://github.com/bower/semver">https://github.com/bower/semver</a>
           li <a href="http://semver.org/">http://semver.org/</a>
 
-      section(data-bespoke-hash='bower-json-manifest')
+      section
         h2 bower.json Manifest File
         pre
           code.language-javascript
@@ -95,7 +94,7 @@ html
         ul
           li <a href="https://github.com/bower/bower.json-spec">https://github.com/bower/bower.json-spec</a>
 
-      section(data-bespoke-hash='finding-bower-packages')
+      section
         h2 Finding Bower Packages
         pre
           code.language-javascript
@@ -106,15 +105,15 @@ html
         ul
           li <a href="http://bower.io/search/">http://bower.io/search/</a>
 
-      section(data-bespoke-hash='wiredep')
-        h2 Automating Bower w/ Grunt, Gulp
-        h3 Wiredep to the rescue!
+      section
+        h2 Automating Bower
+        h3 w/ Grunt, Gulp
         p
-        p
+        p Wiredep & other tools:
         ul
           li <a href="http://bower.io/docs/tools/">http://bower.io/docs/tools/</a>
 
-      section(data-bespoke-hash='local-package-development')
+      section
         h2 Local Package Development
         pre
           code.language-javascript
@@ -127,20 +126,18 @@ html
         ul
           li <a href="https://oncletom.io/2013/live-development-bower-component/">https://oncletom.io/2013/live-development-bower-component/</a>
 
-      section(data-bespoke-hash='fin')
+      section
         h2 Thank You!
 
-      section.align-left(data-bespoke-hash='links')
+      section.align-left
         h2 Links
         ul
           li <a href="https://github.com/benjaminma/talk-bower-workflows">GitHub: benjaminma/talk-bower-workflows</a>
-          li <a href="http://bower.io/">http://bower.io/</a>
+          li <a href="http://bower.io/">Bower Homepage</a>
           li <a href="http://www.quora.com/Why-use-Bower-when-there-is-npm">Quora: Why use Bower when there is npm?</a>
-          li <a href="https://github.com/bower/semver">https://github.com/bower/semver</a>
-          li <a href="http://semver.org/">http://semver.org/</a>
-          li <a href="https://github.com/bower/bower.json-spec">https://github.com/bower/bower.json-spec</a>
-          li <a href="http://bower.io/search/">http://bower.io/search/</a>
-          li <a href="http://bower.io/docs/tools/">http://bower.io/docs/tools/ (wiredep!)</a>
+          li <a href="https://github.com/bower/semver">GitHub: bower/semver</a>
+          li <a href="http://bower.io/search/">Bower Search</a>
+          li <a href="http://bower.io/docs/tools/">Bower Tools (wiredep!)</a>
           li <a href="https://oncletom.io/2013/live-development-bower-component/">Oncle Tom's Bower Link Tutorial</a>
           li <a href="http://www.truelab.eu/cheatsheets/truelab_bower_cheatsheet_white.pdf">PDF: Truelab's Bower Cheat Sheet</a>
           li <a href="https://github.com/markusfalk/front-end-cheatsheet/blob/master/pdf/front-end-cheat-sheet.pdf?raw=true">PDF: @markus_falk's Front End Cheat Sheet (semver!)</a>
