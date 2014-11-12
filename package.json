@@ -1,6 +1,6 @@
 {
-  "name": "presentation-hello-world",
-  "version": "0.0.0",
+  "name": "talk-bower-workflows",
+  "version": "0.1.0",
   "dependencies": {},
   "devDependencies": {
     "bespoke": "^1.0.0",
